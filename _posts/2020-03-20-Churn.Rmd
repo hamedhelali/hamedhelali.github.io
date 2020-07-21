@@ -5,7 +5,6 @@ tags: [Classification, Logistic regression, Churn prediction]
 excerpt: "Classification, Logistic regression, Churn prediction"
 categories: Projects
 date: 2020-03-20
-output: html_document
 ---
 
 ## Introduction
