@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /blog/
-title: "Blog Posts"
+title: "My Blog"
 author_profile: true
 header:
   image: "/images/fort point.png"
