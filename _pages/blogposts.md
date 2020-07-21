@@ -1,11 +1,11 @@
 ---
-title: "Kos"
+title: "My blog"
 layout: category
 permalink: /blog/
-taxonomy: kos
+taxonomy: Blog-post
 author_profile: true
 header:
-  image: "/images/fort point.png"
+  image: "/images/Math_2.jpg"
 ---
 
 
