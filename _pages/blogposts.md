@@ -1,7 +1,8 @@
 ---
-layout: posts
+title: "Kos"
+layout: category
 permalink: /blog/
-title: "My Blog"
+taxonomy: kos
 author_profile: true
 header:
   image: "/images/fort point.png"
