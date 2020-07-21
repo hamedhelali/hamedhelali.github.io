@@ -1,5 +1,5 @@
 ---
-title: "GLM_Project"
+title: "Costumer Churn Prediction"
 author: "Hamed Helali"
 date: 2020-03-20
 tags: [Classification, Logistic regression, Churn prediction]
