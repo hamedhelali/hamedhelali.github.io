@@ -12,7 +12,7 @@ mathjax: "true"
 
 To implement EM algorithm for probit regression, at first I am going to prepare simulated data for modeling.
 
-{% highlight r %}
+```r
 x <- rnorm(2000,0,2)
 betas <- c(0.1 , 0.2) #True values
 z <- rnorm(2000, mean = cbind(1,x) %*% betas, sd=1)
@@ -21,7 +21,7 @@ y[y>=0] <- 1
 y[y<0] <- 0
 t <- glm(y~x, family = binomial(link = "probit"))
 summary(t)
-{% endhighlight %}
+```
 
 
 
@@ -65,7 +65,7 @@ E(z_i|z_i<0) =x^T\beta-\frac{\phi(x^T\beta)}{\Phi(-x^T\beta)}
 $$
 
 
-{% highlight r %}
+```r
 b <- c(10,2) #initial values for betas
 ex <- cbind(1,x)
 mu <- ex %*% b
@@ -84,7 +84,7 @@ while ((!converged) & (it < maxits)) {
   converged = max(abs(b_old - b)) <= tol
 }
 b
-{% endhighlight %}
+```
 
 
 
@@ -96,9 +96,9 @@ b
 
 
 
-{% highlight r %}
+```r
 it
-{% endhighlight %}
+```
 
 
 
