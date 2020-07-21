@@ -1,5 +1,13 @@
 ---
-output: html_document
+title: "Implementing EM Algorithm for Probit Regression"
+author: "Hamed Helali"
+date: 2020-03-15
+tags: [EM Algorithm, Probit Regression, R]
+categories: Blog-post
+header:
+  image: "/images/asian.jpg"
+excerpt: "EM Algorithm, Probit Regression, R"
+mathjax: "true"
 ---
 
 To implement EM algorithm for probit regression, at first I am going to prepare simulated data for modeling.
