@@ -86,7 +86,7 @@ analytics:
 author:
   name             : "Hamed Helali"
   avatar           : "/images/hamed.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A curious data scientist, Statistics enthusiast and a tea lover"
+  bio              : "A curious data scientist, Statistics enthusiast and tea lover"
   location         : "Toronto, ON"
   email            : "hellali.hamed@gmail.com" 
   uri              :
