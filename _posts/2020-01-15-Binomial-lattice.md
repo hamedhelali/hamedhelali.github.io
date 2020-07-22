@@ -1,4 +1,18 @@
+---
+title: "A smart implementation of binomial lattice method"
+author: "Hamed Helali"
+date: 2020-01-15
+tags: [Option pricing, Binomial lattice, Python]
+categories: Blog-post
+header:
+  image: "/images/asian.jpg"
+excerpt: "Option pricing, Binomial lattice, Python"
+mathjax: "true"
+---
+
 In this post I introduce the memory and CPU-efficient way of implementing binomial lattice method for option pricing. In this way you should note this pattern of values on binomial tree:
+
+![center](/images/Bin/lattice.png)
 
 # Python implementation
 
