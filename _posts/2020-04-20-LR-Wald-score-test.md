@@ -1,12 +1,12 @@
 ---
 title: "Performance of LR, Wald and score tests with respect to sample size"
 author: "Hamed Helali"
-date: 2020-02-20
+date: 2020-04-20
 tags: [LR test, Wald test, score test, R]
 categories: Blog-post
 header:
   image: "/images/asian.jpg"
-excerpt: "LR test, Wald test, score test, R"
+excerpt: "LR test, Wald test, Score test, R"
 mathjax: "true"
 ---
 
