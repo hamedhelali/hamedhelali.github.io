@@ -3,7 +3,7 @@ title: "Finite difference method for pricing european options"
 author: "Hamed Helali"
 date: 2020-03-30
 tags: [Option pricing, European option, Numerical methods, FDM, Black-Scholes equation, Python]
-categories: Project
+categories: Blog-post
 header:
   image: "/images/asian.jpg"
 excerpt: "Option pricing, European option, Numerical methods, FDM, Black-Scholes equation, Python"
