@@ -1,3 +1,16 @@
+---
+title: "Crank-Nicolson and Projected SOR for pricing american options"
+author: "Hamed Helali"
+date: 2020-04-04
+tags: [Option pricing, American option, Numerical methods, FDM, Black-Scholes equation, Projected SOR, Python]
+categories: Blog-post
+header:
+  image: "/images/asian.jpg"
+excerpt: "Option pricing, American option, Numerical methods, FDM, Black-Scholes equation, Projected SOR, Python"
+mathjax: "true"
+---
+
+
 In [this post](https://hamedhelali.github.io/project/FDM-European-option-pricing/) I have elaborated on using Crank-Nicolson method to price a european option. It is more complicated to price american options using this method because they can be exercised any time before expiration time. To employ Crank-Nicolson for american options, linear systems in each layer can be solved using a numerical method called Projected SOR (Successive Overrelaxation). Using this method, for each time layer i, we have the iterative scheme:
 
 # Pyhon implementation
