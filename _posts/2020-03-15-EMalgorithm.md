@@ -50,19 +50,17 @@ summary(t)
 ## Number of Fisher Scoring iterations: 4
 {% endhighlight %}
 
-As the next step, we should calculate $\gamma_i$:
-$$
-\gamma_i=E(z_i|y=y_i)
-$$
-$z_i$s conditioned on $y_i$ have truncated normal distribution. So the expected value can be calculated by the equations below. If $y_i=1$,
-$$
-E(z_i|z_i \geq 0)=x^T\beta+\frac{\phi(x^T\beta)}{\Phi(x^T\beta)}
-$$
+As the next step, we should calculate $$\gamma_i$$:
 
-And If $y_i=0$,
-$$
-E(z_i|z_i<0) =x^T\beta-\frac{\phi(x^T\beta)}{\Phi(-x^T\beta)}
-$$
+$$\gamma_i=E(z_i|y=y_i)$$
+
+$$z_i$$s conditioned on $$y_i$$ have truncated normal distribution. So the expected value can be calculated by the equations below. If $$y_i=1$$,
+
+$$E(z_i|z_i \geq 0)=x^T\beta+\frac{\phi(x^T\beta)}{\Phi(x^T\beta)}$$
+
+And If $$y_i=0$$,
+
+$$E(z_i|z_i<0) =x^T\beta-\frac{\phi(x^T\beta)}{\Phi(-x^T\beta)}$$
 
 
 ```r
