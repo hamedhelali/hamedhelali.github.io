@@ -1,5 +1,5 @@
 ---
-title: "Costumer Churn Prediction"
+title: "Costumer churn prediction"
 author: "Hamed Helali"
 date: 2020-03-20
 tags: [Classification, Logistic regression, Churn prediction, R]
