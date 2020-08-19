@@ -5,6 +5,7 @@ header:
   image: "/images/tea.jpg"
 ---
 
-As a statistics lifelong student, I am interested in machine learning models and numerical algorithms to solve the models as well. I am equipped with advanced statistical modeling knowledge such as Bayesian modeling and inference, generalized linear models (GLM), mixed effects models and longitudinal data analysis.  
-To complement my toolbox of modeling, I am learning deep neural networks (DNN) as well as Tensorflow to leverage my knowledge in this area.  
-You can see my resume [here](/assets/Hamed_Helali_Resume.pdf)
+As a machine learning lifelong student, I am interested in natural language processing (NLP) applications. I am equipped with advanced statistical modeling knowledge such as Bayesian modeling and inference, generalized linear models (GLM), mixed effects models and longitudinal data analysis.  
+To complement my toolbox of modeling, I am learning different neural networks architectures used in NLP as well as Keras and Tensorflow to leverage my knowledge in this area. For more information, please check out my resume [here](/assets/Hamed_Helali_Resume.pdf)
+
+I also love reading (fiction), hiking in nature and drinking tea with a friend.
