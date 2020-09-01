@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "My Personal Webpage"
+title                    : "Hamed Helali - Portfolio Page"
 title_separator          : "-"
 name                     : "Hamed Helali"
 description              : "Data scientist portfolio page"
