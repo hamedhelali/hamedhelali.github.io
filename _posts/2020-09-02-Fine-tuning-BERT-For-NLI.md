@@ -11,7 +11,7 @@ mathjax: "true"
 ---
 
 ## 1. Introduction
-In this notebook, I will build a deep learning model to perform Natural Language Inference (NLI) task. NLI is classifying relationships between pairs of sentences to *contradication*, *entailment* or *neutral*. First, we will develop a preliminary model by fine-tuning a pretrained BERT. Then we will explore different models to tune hyperparameters and get better performance. As a more systematic approach (than mere trial and error), we will use random search to tune hyperparameters.  
+In this notebook, we build a deep learning model to perform Natural Language Inference (NLI) task. NLI is classifying relationships between pairs of sentences as *contradication*, *entailment* or *neutral*. First, we will develop a preliminary model by fine-tuning a pretrained BERT. Then we will explore different models to tune hyperparameters and get better performance. As a more systematic approach (than mere trial and error), we will use random search to tune hyperparameters.  
 Dataset used for this task is training, development and test sets from [Stanford Natural Language Inference (SNLI) Corpus](https://nlp.stanford.edu/projects/snli/). Training set of this data set has 550153 examples and dev and test sets each have 10000 examples. Each example have been labeled independently by 5 people and the best label is chosen as 'gold label'. For some examples there is no gold label and the this field equals to '-'.
 
 
