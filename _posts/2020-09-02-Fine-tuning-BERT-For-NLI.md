@@ -929,22 +929,6 @@ test_corpus2['int_label'] = le.transform(test_corpus2['gold_label'])
 train_corpus.head()
 ```
 
-    /usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:3: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      This is separate from the ipykernel package so we can avoid doing imports until
-    /usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:4: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      after removing the cwd from sys.path.
-
-
-
-
 
 <div>
 <style scoped>
@@ -1228,8 +1212,8 @@ What we did in the last section in testing performance of model with different b
 * **Feedforward layers on top of the bert encoder:** In last part, we directly connected the `'[CLS]'` output of the bert encoder to a softmax layer. It is not necessarily the best possible option. we will investigate to see if adding some (up to 3) dense layers before the softmax layer improves the performance.
 * **No. of units in each layer:** Number of units in the each of layers of feedforward is another hyperparameter that we will investigate. I will not tune the activation functions, though.
 * **Dropout regularization on each layer and their rates:** The other question is if we need to do dropout regularization on the outputs of layers. If yes, what is the best rate of dropout?
-* **Learning rate of Adam optimization algorithm:** Learning rate of (any) optimization alogrithm is the most important hyperparameter to be tuned. We will set an interval of $10^{-6}$ to $10^{-4}$ and sample it in a logarithmic scale. This interval is inspired by the learning rates that authors of the BERT paper have chosen for different tasks of fine tuning.  
-We will not tune on the $\beta_1=0.9$ and $\beta_2=0.999$ and $\epsilon=10^{-7}$ parameters of Adam optimization algorithm and will use the default valuse.
+* **Learning rate of Adam optimization algorithm:** Learning rate of (any) optimization alogrithm is the most important hyperparameter to be tuned. We will set an interval of $$10^{-6}$$ to $$10^{-4}$$ and sample it in a logarithmic scale. This interval is inspired by the learning rates that authors of the BERT paper have chosen for different tasks of fine tuning.  
+We will not tune on the $$\beta_1=0.9$$, $$\beta_2=0.999$$ and $$\epsilon=10^{-7}$$ parameters of Adam optimization algorithm and will use the default valuse.
 
 
 ```python
