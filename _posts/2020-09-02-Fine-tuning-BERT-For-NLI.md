@@ -84,7 +84,7 @@ train_corpus.head()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
@@ -382,7 +382,7 @@ train_corpus.groupby('gold_label').count()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
@@ -450,20 +450,15 @@ train_corpus.groupby('gold_label').count()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th></th>
+    <tr style="text-align: left;">
+      <th>gold_label</th>
       <th>sentence1</th>
       <th>sentence2</th>
-    </tr>
-    <tr>
-      <th>gold_label</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -507,20 +502,15 @@ dev_corpus.groupby('gold_label').count()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th></th>
+    <tr style="text-align: left;">
+      <th>gold_label</th>
       <th>sentence1</th>
       <th>sentence2</th>
-    </tr>
-    <tr>
-      <th>gold_label</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -564,20 +554,15 @@ test_corpus.groupby('gold_label').count()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: left;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th></th>
+    <tr style="text-align: left;">
+      <th>gold_label</th>
       <th>sentence1</th>
       <th>sentence2</th>
-    </tr>
-    <tr>
-      <th>gold_label</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
