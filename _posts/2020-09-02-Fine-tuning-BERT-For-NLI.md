@@ -388,14 +388,11 @@ train_corpus.groupby('gold_label').count()
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>sentence1</th>
       <th>sentence2</th>
     </tr>
     <tr>
       <th>gold_label</th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
