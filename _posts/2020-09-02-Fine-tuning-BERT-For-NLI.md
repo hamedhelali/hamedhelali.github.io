@@ -648,15 +648,15 @@ plt.show()
 ```
 
 
-![png](output_20_0.png)
+![png](/images/bert/output_20_0.png)
 
 
 
-![png](output_20_1.png)
+![png](/images/bert/output_20_1.png)
 
 
 
-![png](output_20_2.png)
+![png](/images/bert/output_20_2.png)
 
 
 It is evident that dev and test sets are similiar length-wise. Then, Let's go into the vocabulary used in each data set.
@@ -922,7 +922,7 @@ tf.keras.utils.plot_model(model, show_shapes=True)
 
 
 
-![png](output_41_0.png)
+![png](/images/bert/output_41_0.png)
 
 
 
@@ -1146,64 +1146,15 @@ model_s_b64.fit(new_model_input, new_train_corpus.int_label.values,
 ```
 
     Epoch 1/2
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
+
+      1/859 [..............................] - ETA: 8:01 - loss: 1.4580 - accuracy: 0.3438
 
 
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 102).
-
-
-      1/859 [..............................] - ETA: 8:01 - loss: 1.4580 - accuracy: 0.3438WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/summary_ops_v2.py:1277: stop (from tensorflow.python.eager.profiler) is deprecated and will be removed after 2020-07-01.
-    Instructions for updating:
-    use `tf.profiler.experimental.stop` instead.
-
-
-    WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/summary_ops_v2.py:1277: stop (from tensorflow.python.eager.profiler) is deprecated and will be removed after 2020-07-01.
-    Instructions for updating:
-    use `tf.profiler.experimental.stop` instead.
-
-
-      2/859 [..............................] - ETA: 18:40 - loss: 1.5451 - accuracy: 0.3125WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.8021s vs `on_train_batch_end` time: 1.2489s). Check your callbacks.
-
-
-    WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.8021s vs `on_train_batch_end` time: 1.2489s). Check your callbacks.
-
+      2/859 [..............................] - ETA: 18:40 - loss: 1.5451 - accuracy: 0.3125
 
     859/859 [==============================] - 1171s 1s/step - loss: 0.6216 - accuracy: 0.7378
     Epoch 2/2
     859/859 [==============================] - 1170s 1s/step - loss: 0.4279 - accuracy: 0.8358
-
-
-
 
 
     <tensorflow.python.keras.callbacks.History at 0x7f192625def0>
@@ -1230,29 +1181,9 @@ Dev set accuracy of the new model trained with smaller data set is 85.2%:
 accuracy(model_s_b64, dev_input, dev_corpus2)
 ```
 
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
+  
 
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-      2/154 [..............................] - ETA: 27sWARNING:tensorflow:Callbacks method `on_predict_batch_end` is slow compared to the batch time (batch time: 0.0177s vs `on_predict_batch_end` time: 0.2930s). Check your callbacks.
-
-
-    WARNING:tensorflow:Callbacks method `on_predict_batch_end` is slow compared to the batch time (batch time: 0.0177s vs `on_predict_batch_end` time: 0.2930s). Check your callbacks.
-
+      2/154 [..............................] - ETA: 27s
 
     154/154 [==============================] - 48s 310ms/step
     0.8528632565722437
@@ -1274,64 +1205,15 @@ model_s_b16.fit(new_model_input, new_train_corpus.int_label.values,
 ```
 
     Epoch 1/2
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
+
+       1/3403 [..............................] - ETA: 20:51 - loss: 1.5016 - accuracy: 0.4375
 
 
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_4:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 96).
-
-
-       1/3403 [..............................] - ETA: 20:51 - loss: 1.5016 - accuracy: 0.4375WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/summary_ops_v2.py:1277: stop (from tensorflow.python.eager.profiler) is deprecated and will be removed after 2020-07-01.
-    Instructions for updating:
-    use `tf.profiler.experimental.stop` instead.
-
-
-    WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/summary_ops_v2.py:1277: stop (from tensorflow.python.eager.profiler) is deprecated and will be removed after 2020-07-01.
-    Instructions for updating:
-    use `tf.profiler.experimental.stop` instead.
-
-
-       2/3403 [..............................] - ETA: 49:14 - loss: 1.5090 - accuracy: 0.4688WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.4272s vs `on_train_batch_end` time: 0.9418s). Check your callbacks.
-
-
-    WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.4272s vs `on_train_batch_end` time: 0.9418s). Check your callbacks.
-
+       2/3403 [..............................] - ETA: 49:14 - loss: 1.5090 - accuracy: 0.4688
 
     3403/3403 [==============================] - 2667s 784ms/step - loss: 0.5544 - accuracy: 0.7758
     Epoch 2/2
     3403/3403 [==============================] - 2666s 783ms/step - loss: 0.3621 - accuracy: 0.8659
-
-
-
 
 
     <tensorflow.python.keras.callbacks.History at 0x7f6e20013208>
@@ -1436,17 +1318,6 @@ tuner = kt.RandomSearch(hyper_model_builder,
                         project_name = 'NLI_hp_tuning')                     
 ```
 
-    INFO:tensorflow:Reloading Oracle from existing project /content/drive/My Drive/NLI_training/NLI_hp_tuning/oracle.json
-
-
-    INFO:tensorflow:Reloading Oracle from existing project /content/drive/My Drive/NLI_training/NLI_hp_tuning/oracle.json
-
-
-    INFO:tensorflow:Reloading Tuner from /content/drive/My Drive/NLI_training/NLI_hp_tuning/tuner0.json
-
-
-    INFO:tensorflow:Reloading Tuner from /content/drive/My Drive/NLI_training/NLI_hp_tuning/tuner0.json
-
 
 
 ```python
@@ -1520,10 +1391,7 @@ best_hps = tuner.get_best_hyperparameters(num_trials=1)[0]
 <span style="color:blue"> |-units_2: 96</span>
 
 
-    INFO:tensorflow:Oracle triggered exit
 
-
-    INFO:tensorflow:Oracle triggered exit
 
 
 In the block above, you can see the result of random search for tuning values of hyperparameters. Basically, to build a model with the best hyperparameters found, we should use the following line of code:
@@ -1617,7 +1485,7 @@ tf.keras.utils.plot_model(tuned_model, show_shapes=True)
 
 
 
-![png](output_89_0.png)
+![png](/images/bert/output_89_0.png)
 
 
 
@@ -1627,9 +1495,6 @@ And the learning rate is:
 ```python
 tf.keras.backend.eval(tuned_model.optimizer.lr)
 ```
-
-
-
 
     2.7686747e-06
 
@@ -1652,10 +1517,7 @@ tuned_model.fit(new_model_input, new_train_corpus.int_label.values,
 ```
 
     Epoch 1/5
-       2/3416 [..............................] - ETA: 34:55 - loss: 0.6977 - accuracy: 0.7812WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.3207s vs `on_train_batch_end` time: 0.6543s). Check your callbacks.
-
-
-    WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.3207s vs `on_train_batch_end` time: 0.6543s). Check your callbacks.
+       2/3416 [..............................] - ETA: 34:55 - loss: 0.6977 - accuracy: 0.7812
 
 
     3416/3416 [==============================] - 1937s 567ms/step - loss: 0.5666 - accuracy: 0.7998
@@ -1688,24 +1550,7 @@ Train set accuracy for the tuned model is 88.8% which is very close to (not-tune
 accuracy(tuned_model, dev_input, dev_corpus2)
 ```
 
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 73).
-
-
+   
     0.8620263591433278
 
 
@@ -1716,25 +1561,7 @@ Dev set accuracy for the tuned model is 86.2%. A slight improvement has been mad
 accuracy(tuned_model, test_input, test_corpus2)
 ```
 
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 76).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_word_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 76).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 76).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_mask_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 76).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 76).
-
-
-    WARNING:tensorflow:Model was constructed with shape (None, 125) for input Tensor("input_segment_ids_1:0", shape=(None, 125), dtype=int32), but it was called on an input with incompatible shape (None, 76).
-
-
-    0.8609098228663447
+        0.8609098228663447
 
 
 ## 5. Conclusion
@@ -1763,6 +1590,3 @@ As a wrap up, some points are worth discussing:
   * Second and more important: It seems that BERT encoder, which is a large network with 110 million parameters, has a great anchor in our model and its impact is very much larger than the classification head we did hyperparameter tuning on. 
 
 
-```python
-
-```
