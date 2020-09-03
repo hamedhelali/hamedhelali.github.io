@@ -1,6 +1,14 @@
-# Fine-tuning BERT for Natural Language Inference
-
-#### Hamed Helali
+---
+title: "Fine-tuning BERT for Natural Language Inference"
+author: "Hamed Helali"
+date: 2020-09-02
+tags: [NLP, Natural Language Inference, BERT, Deep Learning, TensorFlow, Python]
+categories: Project
+header:
+  image: "/images/bert.jpg"
+excerpt: "NLP, Natural Language Inference, BERT, Deep Learning, TensorFlow, Python"
+mathjax: "true"
+---
 
 ## 1. Introduction
 In this notebook, I will build a deep learning model to perform Natural Language Inference (NLI) task. NLI is classifying relationships between pairs of sentences to *contradication*, *entailment* or *neutral*. First, we will develop a preliminary model by fine-tuning a pretrained BERT. Then we will explore different models to tune hyperparameters and get better performance. As a more systematic approach (than mere trial and error), we will use random search to tune hyperparameters.  
