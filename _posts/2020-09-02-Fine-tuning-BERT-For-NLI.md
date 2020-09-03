@@ -390,8 +390,6 @@ train_corpus.groupby('gold_label').count()
     <tr style="text-align: right;">
       <th>sentence1</th>
       <th>sentence2</th>
-    </tr>
-    <tr>
       <th>gold_label</th>
     </tr>
   </thead>
