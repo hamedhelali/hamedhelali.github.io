@@ -91,9 +91,9 @@ train_corpus.head()
   <thead>
     <tr style="text-align: left;">
       <th></th>
+      <th>gold_label</th>
       <th>sentence1</th>
       <th>sentence2</th>
-      <th>gold_label</th>
     </tr>
   </thead>
   <tbody>
@@ -387,10 +387,10 @@ train_corpus.groupby('gold_label').count()
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: left;">
+      <th>gold_label</th>
       <th>sentence1</th>
       <th>sentence2</th>
-      <th>gold_label</th>
     </tr>
   </thead>
   <tbody>
