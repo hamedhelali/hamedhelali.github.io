@@ -1,17 +1,19 @@
 ---
-title: "Assignment4-Q7.6"
+title: "Change Point Analysis with a Bayesian Approach"
 author: "Hamed Helali"
-date: "12/12/2020"
-output:
-  md_document:
-    variant: markdown_github
-    preserve_yaml: true
+date: 2020-04-20
+tags: [Change point analysis, Gibbs sampler, MCMC, Hierarchical models, Bayesian statistics, R]
+categories: Blog-post
+header:
+  image: "/images/asian.jpg"
+excerpt: "Change point analysis, Gibbs sampler, MCMC, Hierarchical models, Bayesian statistics, R"
+mathjax: "true"
 ---
 
 In this post, I am going to perform a change-point analysis on
 coal-mining disasters time-series data from 1851 to 1962. For this
 analysis, we take a Bayesian approach and will see steps of Infering on
-this problem using Gibbs sampler. Let us take a look at data as the
+this problem using Gibbs sampler (This is Exercise 7.6 from [Computational statistics](https://www.stat.colostate.edu/computationalstatistics/) by G. H. Givens and J. A. Hoeting). Let us take a look at [our data](https://www.stat.colostate.edu/computationalstatistics/datasets.zip) as the
 first step.
 
 ``` r
