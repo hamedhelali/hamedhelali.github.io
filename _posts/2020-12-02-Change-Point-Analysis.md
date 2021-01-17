@@ -21,12 +21,6 @@ library(readr)
 coal <- read_table2("/Users/hamed/Documents/Academics/Term 2/Applied Statistics I/Assignment4/datasets/coal.csv")
 ```
 
-    ## Parsed with column specification:
-    ## cols(
-    ##   year = col_double(),
-    ##   disasters = col_double()
-    ## )
-
 ``` r
 plot(coal$year, coal$disasters, type = 'l', xlab = "Year", ylab = "Disasters")
 ```
