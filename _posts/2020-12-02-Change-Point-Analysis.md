@@ -37,13 +37,13 @@ Visually, it can be noticed that there might be a change point in this
 time series data. For these data, we assume the hierarchical model:
 
 $$
-X_j \sim \begin{cases} Poisson(\lambda_1) & j=1,..., \theta \\ Poisson(\lambda_2) & j=\theta +1,...,112 end{cases}
+X_j \sim \begin{cases} Poisson(\lambda_1) & j=1,..., \theta \\ Poisson(\lambda_2) & j=\theta +1,...,112 \end{cases}
 $$
 
-Assume *λ*<sub>*i*</sub>\|*α* ∼ *G**a**m**m**a*(3, *α*) for *i* = 1, 2,
-where *α* ∼ *G**a**m**m**a*(10, 10), and assume *θ* follows a discrete
+Assume $$ \lambda_i| \alpha \sim Gamma(3, \alpha) $$ for i = 1, 2,
+where $$ \alpha \sim Gamma(10, 10) $$, and assume $$ \theta $$ follows a discrete
 uniform distribution over {1,…,111}. Now, we need to estimate the
-posterior distribution of the parameters using a Gibbs sampler. *θ* is
+posterior distribution of the parameters using a Gibbs sampler. $$ \theta $$ is
 of a special interest for us since it is the change point we mean to
 estimate.
 
@@ -68,18 +68,19 @@ $$
 = p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\theta^{(t)})p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\lambda_2^{(t)})p(\alpha) \propto p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha)
 $$
 
-Note that *p*(*θ*<sup>(*t*)</sup>) and
-$$p({\\bf X}\|\\theta^{(t)},\\lambda\_1^{(t)},\\lambda\_2^{(t)})$$ in this
+Note that $$ p(\theta^{(t)}) $$ and $$p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\lambda_2^{(t)})$$ in this
 equation are constants not dependent on $$\alpha$$.
 
 $$
-p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha) = \frac{\alpha^3}{\Gamma(3)}\lambda_1^{(t)^2}e^{-\alpha \lambda_1^{(t)}} \times \frac{\alpha^3}{\Gamma(3)}\lambda_2^{(t)^2}e^{-\alpha \lambda_2^{(t)}} \times \frac{10^{10}}{\Gamma(10)}\alpha^9e^{-10\alpha} \\ \propto \alpha^{15} e^{-(\lambda_1^{(t)} +\lambda_2^{(t)} +10)\alpha}
+p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha) = \frac{\alpha^3}{\Gamma(3)}\lambda_1^{(t)^2}e^{-\alpha \lambda_1^{(t)}} \times \frac{\alpha^3}{\Gamma(3)}\lambda_2^{(t)^2}e^{-\alpha \lambda_2^{(t)}} \times \frac{10^{10}}{\Gamma(10)}\alpha^9e^{-10\alpha}
 $$
- Again, note that *λ*<sub>1</sub><sup>(*t*)<sup>2</sup></sup> and
-*λ*<sub>2</sub><sup>(*t*)<sup>2</sup></sup> are constant w.r.t *α*. So,
+
+Again, note that $$ \lambda_1^{(t)^2} $$ and $$ \lambda_2^{(t)^2} $$ are constants w.r.t $$ \alpha $$. So,
 we have:
 
- ∝ *G**a**m**m**a*(16 , *λ*<sub>1</sub><sup>(*t*)</sup> + *λ*<sub>2</sub><sup>(*t*)</sup> + 10)
+$$
+\propto \alpha^{15} e^{-(\lambda_1^{(t)} +\lambda_2^{(t)} +10)\alpha} \propto Gamma(16, \lambda_1^{(t)^2} + \lambda_2^{(t)^2} + 10)
+$$
 
 In a similiar way, it can be shown that:
 
@@ -96,7 +97,7 @@ p(\theta|\lambda_1^{(t)}, \lambda_2^{(t)},\alpha^{(t)} , {\bf X}) \propto \lambd
 $$
 
 Although it is not a known distribution, but we can easily sample from
-it in R using ‘sample’ function because *θ*’s are discrete and the
+it in R using ‘sample’ function because $$ \theta $$’s are discrete and the
 formula above is proportionate to pmf.
 
 Implementing Gibbs sampler
