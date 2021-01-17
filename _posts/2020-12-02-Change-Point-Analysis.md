@@ -31,7 +31,8 @@ coal <- read_table2("/Users/hamed/Documents/Academics/Term 2/Applied Statistics 
 plot(coal$year, coal$disasters, type = 'l', xlab = "Year", ylab = "Disasters")
 ```
 
-![](Assignment4-Q76_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![time-series-exploration](/images/2020-12-02-Change-Point-Analysis/unnamed-chunk-2-1.png)
+
 Visually, it can be noticed that there might be a change point in this
 time series data. For these data, we assume the hierarchical model:
 
