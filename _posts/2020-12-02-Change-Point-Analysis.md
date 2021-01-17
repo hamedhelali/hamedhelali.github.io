@@ -1,7 +1,7 @@
 ---
 title: "Change Point Analysis with a Bayesian Approach"
 author: "Hamed Helali"
-date: 2020-04-20
+date: 2020-12-02
 tags: [Change point analysis, Gibbs sampler, MCMC, Hierarchical models, Bayesian statistics, R]
 categories: Blog-post
 header:
@@ -35,7 +35,9 @@ plot(coal$year, coal$disasters, type = 'l', xlab = "Year", ylab = "Disasters")
 Visually, it can be noticed that there might be a change point in this
 time series data. For these data, we assume the hierarchical model:
 
-$$ X\_j \\sim \\begin{cases} Poisson(\\lambda\_1) & j=1,..., \\theta\\\\Poisson(\\lambda\_2) & j=\\theta+1,...,112 \\end{cases} $$
+$$
+X\_j \\sim \\begin{cases} Poisson(\\lambda\_1) & j=1,..., \\theta\\\\Poisson(\\lambda\_2) & j=\\theta+1,...,112 \\end{cases}
+$$
 
 Assume *λ*<sub>*i*</sub>\|*α* ∼ *G**a**m**m**a*(3, *α*) for *i* = 1, 2,
 where *α* ∼ *G**a**m**m**a*(10, 10), and assume *θ* follows a discrete
