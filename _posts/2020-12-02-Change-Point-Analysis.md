@@ -37,7 +37,7 @@ Visually, it can be noticed that there might be a change point in this
 time series data. For these data, we assume the hierarchical model:
 
 $$
-X\_j \\sim \\begin{cases} Poisson(\\lambda\_1) & j=1,..., \\theta\\\\Poisson(\\lambda\_2) & j=\\theta+1,...,112 \\end{cases}
+X_j \sim \begin{cases} Poisson(\lambda\_1) & j=1,..., \theta \\ Poisson(\lambda_2) & j=\theta+1,...,112 end{cases}
 $$
 
 Assume *λ*<sub>*i*</sub>\|*α* ∼ *G**a**m**m**a*(3, *α*) for *i* = 1, 2,
@@ -61,11 +61,11 @@ To use Gibbs sampling approach, we need to derive conditional
 distribution of each of the parameters on the others:
 
 $$
-p(\alpha|\lambda_1^{(t)}, \lambda_2^{(t)}, \theta^{(t)}, {\bf X}) \propto p(\lambda_1^{(t)}, \lambda_2^{(t)}, \theta^{(t)}, {\bf X}|\alpha) \times p(\alpha) = p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p({\bf X}, \theta^{(t)}|\lambda_1^{(t)},\lambda_2^{(t)})p(\alpha)
+p(\alpha|\lambda_1^{(t)}, \lambda_2^{(t)}, \theta^{(t)}, {\bf X}) \propto p(\lambda_1^{(t)}, \lambda_2^{(t)}, \theta^{(t)}, {\bf X}|\alpha) \times p(\alpha) \\= p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p({\bf X}, \theta^{(t)}|\lambda_1^{(t)},\lambda_2^{(t)})p(\alpha)
 $$
 
 $$
-= p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\theta^{(t)})p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\\lambda_2^{(t)})p(\alpha) \propto p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha)
+= p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\theta^{(t)})p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\lambda_2^{(t)})p(\alpha) \propto p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha)
 $$
 
 Note that *p*(*θ*<sup>(*t*)</sup>) and
@@ -73,7 +73,7 @@ $p({\\bf X}\|\\theta^{(t)},\\lambda\_1^{(t)},\\lambda\_2^{(t)})$ in this
 equation are constants not dependent on *α*.
 
 $$
-p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha) = \frac{\alpha^3}{\Gamma(3)}\lambda_1^{(t)^2}e^{-\alpha \lambda_1^{(t)}} \times \frac{\alpha^3}{\Gamma(3)}\lambda_2^{(t)^2}e^{-\alpha \lambda_2^{(t)}} \times \frac{10^{10}}{\Gamma(10)}\alpha^9e^{-10\alpha} \propto \alpha^{15} e^{-(\lambda_1^{(t)} +\lambda_2^{(t)} +10)\alpha}
+p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha) = \frac{\alpha^3}{\Gamma(3)}\lambda_1^{(t)^2}e^{-\alpha \lambda_1^{(t)}} \times \frac{\alpha^3}{\Gamma(3)}\lambda_2^{(t)^2}e^{-\alpha \lambda_2^{(t)}} \times \frac{10^{10}}{\Gamma(10)}\alpha^9e^{-10\alpha} \\ \propto \alpha^{15} e^{-(\lambda_1^{(t)} +\lambda_2^{(t)} +10)\alpha}
 $$
  Again, note that *λ*<sub>1</sub><sup>(*t*)<sup>2</sup></sup> and
 *λ*<sub>2</sub><sup>(*t*)<sup>2</sup></sup> are constant w.r.t *α*. So,
@@ -94,7 +94,8 @@ $$
 $$
 p(\theta|\lambda_1^{(t)}, \lambda_2^{(t)},\alpha^{(t)} , {\bf X}) \propto \lambda_1^{\sum_{i=1}^{\theta}}\lambda_2^{\sum_{i=\theta+1}^{112}}e^{\theta(\lambda_1^{(t)} - \lambda_2^{(t)})} 
 $$
- Although it is not a known distribution, but we can easily sample from
+
+Although it is not a known distribution, but we can easily sample from
 it in R using ‘sample’ function because *θ*’s are discrete and the
 formula above is proportionate to pmf.
 
