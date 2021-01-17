@@ -143,7 +143,7 @@ plot(x, res[,3], type='l', ylab = "Alpha", main = "Sample path of alpha")
 plot(x, res[,4], type='l', ylab = "Theta", main = "Sample path of theta")
 ```
 
-![](Assignment4-Q76_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](/images/2020-12-02-Change-Point-Analysis/unnamed-chunk-5-1.png)
 
 We can see that the samples are mixing and converging to the stationary
 distribution (i.e. the target distribution) of the chain. To verify this
@@ -157,7 +157,7 @@ acf(res[,3], main = "Alpha")
 acf(res[,4], main = "Theta")
 ```
 
-![](Assignment4-Q76_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](/images/2020-12-02-Change-Point-Analysis/unnamed-chunk-6-1.png)
 
 ACF plots also confirms that the sample is convergent to the stationary
 distribution.
@@ -174,7 +174,7 @@ hist(res[,3], xlab = "Alpha", main = "Histogram of alpha", breaks = 50)
 hist(res[,4], xlab = "Theta", main = "Histogram of theta", breaks = 50)
 ```
 
-![](Assignment4-Q76_files/figure-markdown_github/unnamed-chunk-7-1.png)
+![](/images/2020-12-02-Change-Point-Analysis/unnamed-chunk-7-1.png)
 
 It does not seem that warming up is a serious issue for these chains, so
 I do not discard any realizations for estimation.
