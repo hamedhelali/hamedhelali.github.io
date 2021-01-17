@@ -37,7 +37,7 @@ Visually, it can be noticed that there might be a change point in this
 time series data. For these data, we assume the hierarchical model:
 
 $$
-X_j \sim \begin{cases} Poisson(\lambda\_1) & j=1,..., \theta \\ Poisson(\lambda_2) & j=\theta+1,...,112 end{cases}
+X_j \sim \begin{cases} Poisson(\lambda_1) & j=1,..., \theta \\ Poisson(\lambda_2) & j=\theta +1,...,112 end{cases}
 $$
 
 Assume *λ*<sub>*i*</sub>\|*α* ∼ *G**a**m**m**a*(3, *α*) for *i* = 1, 2,
@@ -69,8 +69,8 @@ $$
 $$
 
 Note that *p*(*θ*<sup>(*t*)</sup>) and
-$p({\\bf X}\|\\theta^{(t)},\\lambda\_1^{(t)},\\lambda\_2^{(t)})$ in this
-equation are constants not dependent on *α*.
+$$p({\\bf X}\|\\theta^{(t)},\\lambda\_1^{(t)},\\lambda\_2^{(t)})$$ in this
+equation are constants not dependent on $$\alpha$$.
 
 $$
 p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha) = \frac{\alpha^3}{\Gamma(3)}\lambda_1^{(t)^2}e^{-\alpha \lambda_1^{(t)}} \times \frac{\alpha^3}{\Gamma(3)}\lambda_2^{(t)^2}e^{-\alpha \lambda_2^{(t)}} \times \frac{10^{10}}{\Gamma(10)}\alpha^9e^{-10\alpha} \\ \propto \alpha^{15} e^{-(\lambda_1^{(t)} +\lambda_2^{(t)} +10)\alpha}
