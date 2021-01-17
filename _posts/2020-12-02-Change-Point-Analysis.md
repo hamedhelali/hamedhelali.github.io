@@ -54,18 +54,18 @@ The target distribution is posterior distribution of parameters given
 data X:
 
 $$
-p(\\lambda\_1, \\lambda\_2, \\alpha, \\theta \|{\\bf X}) = \\frac{p(\\lambda\_1, \\lambda\_2, \\alpha, \\theta ,{\\bf X})}{p({\\bf X})}
+p(\lambda_1, \lambda_2, \alpha, \theta |{\bf X}) = \frac{p(\lambda_1, \lambda_2, \alpha, \theta ,{\bf X})}{p({\bf X})}
 $$
 
 To use Gibbs sampling approach, we need to derive conditional
 distribution of each of the parameters on the others:
 
 $$
-p(\\alpha\|\\lambda\_1^{(t)}, \\lambda\_2^{(t)}, \\theta^{(t)}, {\\bf X}) \\propto p(\\lambda\_1^{(t)}, \\lambda\_2^{(t)}, \\theta^{(t)}, {\\bf X}\|\\alpha) \\times p(\\alpha) = p(\\lambda\_1^{(t)}\|\\alpha)p(\\lambda\_2^{(t)}\|\\alpha)p({\\bf X}, \\theta^{(t)}\|\\lambda\_1^{(t)},\\lambda\_2^{(t)})p(\\alpha)
+p(\alpha|\lambda_1^{(t)}, \lambda_2^{(t)}, \theta^{(t)}, {\bf X}) \propto p(\lambda_1^{(t)}, \lambda_2^{(t)}, \theta^{(t)}, {\bf X}|\alpha) \times p(\alpha) = p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p({\bf X}, \theta^{(t)}|\lambda_1^{(t)},\lambda_2^{(t)})p(\alpha)
 $$
 
 $$
-= p(\\lambda\_1^{(t)}\|\\alpha)p(\\lambda\_2^{(t)}\|\\alpha)p(\\theta^{(t)})p({\\bf X}\|\\theta^{(t)},\\lambda\_1^{(t)},\\lambda\_2^{(t)})p(\\alpha) \\propto p(\\lambda\_1^{(t)}\|\\alpha)p(\\lambda\_2^{(t)}\|\\alpha)p(\\alpha)
+= p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\theta^{(t)})p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\\lambda_2^{(t)})p(\alpha) \propto p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha)
 $$
 
 Note that *p*(*θ*<sup>(*t*)</sup>) and
@@ -73,7 +73,7 @@ $p({\\bf X}\|\\theta^{(t)},\\lambda\_1^{(t)},\\lambda\_2^{(t)})$ in this
 equation are constants not dependent on *α*.
 
 $$
-p(\\lambda\_1^{(t)}\|\\alpha)p(\\lambda\_2^{(t)}\|\\alpha)p(\\alpha) = \\frac{\\alpha^3}{\\Gamma(3)}\\lambda\_1^{(t)^2}e^{-\\alpha \\lambda\_1^{(t)}} \\times \\frac{\\alpha^3}{\\Gamma(3)}\\lambda\_2^{(t)^2}e^{-\\alpha \\lambda\_2^{(t)}} \\times \\frac{10^{10}}{\\Gamma(10)}\\alpha^9e^{-10\\alpha} \\propto \\alpha^{15} e^{-(\\lambda\_1^{(t)} +\\lambda\_2^{(t)} +10)\\alpha}
+p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha) = \frac{\alpha^3}{\Gamma(3)}\lambda_1^{(t)^2}e^{-\alpha \lambda_1^{(t)}} \times \frac{\alpha^3}{\Gamma(3)}\lambda_2^{(t)^2}e^{-\alpha \lambda_2^{(t)}} \times \frac{10^{10}}{\Gamma(10)}\alpha^9e^{-10\alpha} \propto \alpha^{15} e^{-(\lambda_1^{(t)} +\lambda_2^{(t)} +10)\alpha}
 $$
  Again, note that *λ*<sub>1</sub><sup>(*t*)<sup>2</sup></sup> and
 *λ*<sub>2</sub><sup>(*t*)<sup>2</sup></sup> are constant w.r.t *α*. So,
@@ -84,15 +84,15 @@ we have:
 In a similiar way, it can be shown that:
 
 $$
-p(\\lambda\_1^{(t)}\|\\lambda\_2^{(t)}, \\theta^{(t)},\\alpha^{(t)}, {\\bf X}) \\propto Gamma(3+\\sum\_{i=1}^{\\theta^{(t)}}x\_i\\ ,\\ \\theta^{(t)}+\\alpha^{(t)})
+p(\lambda_1^{(t)}|\lambda_2^{(t)}, \theta^{(t)},\alpha^{(t)}, {\bf X}) \propto Gamma(3+\sum_{i=1}^{\theta^{(t)}}x_i , \theta^{(t)}+\alpha^{(t)})
 $$
 
 $$
-p(\\lambda\_2^{(t)}\|\\lambda\_1^{(t)}, \\theta^{(t)},\\alpha^{(t)}, {\\bf X}) \\propto Gamma(3+\\sum\_{i=\\theta^{(t)}+1}^{112}x\_i\\ ,\\ 112-\\theta^{(t)}+\\alpha^{(t)})
+p(\lambda_2^{(t)}|\lambda\_1^{(t)}, \theta^{(t)},\alpha^{(t)}, {\bf X}) \propto Gamma(3+\sum_{i=\theta^{(t)}+1}^{112}x_i, 112-\theta^{(t)}+\alpha^{(t)})
 $$
 
 $$
-p(\\theta\|\\lambda\_1^{(t)}, \\lambda\_2^{(t)},\\alpha^{(t)} , {\\bf X}) \\propto \\lambda\_1^{\\sum\_{i=1}^{\\theta}}\\lambda\_2^{\\sum\_{i=\\theta+1}^{112}}e^{\\theta(\\lambda\_1^{(t)} - \\lambda\_2^{(t)})} 
+p(\theta|\lambda_1^{(t)}, \lambda_2^{(t)},\alpha^{(t)} , {\bf X}) \propto \lambda_1^{\sum_{i=1}^{\theta}}\lambda_2^{\sum_{i=\theta+1}^{112}}e^{\theta(\lambda_1^{(t)} - \lambda_2^{(t)})} 
 $$
  Although it is not a known distribution, but we can easily sample from
 it in R using ‘sample’ function because *θ*’s are discrete and the
