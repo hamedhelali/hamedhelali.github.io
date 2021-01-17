@@ -65,7 +65,7 @@ p(\alpha|\lambda_1^{(t)}, \lambda_2^{(t)}, \theta^{(t)}, {\bf X}) \propto p(\lam
 $$
 
 $$
-= p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\theta^{(t)})p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\lambda_2^{(t)})p(\alpha) \propto p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha)
+= p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\theta^{(t)})p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\lambda_2^{(t)})p(\alpha) \\ \propto p(\lambda_1^{(t)}|\alpha)p(\lambda_2^{(t)}|\alpha)p(\alpha)
 $$
 
 Note that $$ p(\theta^{(t)}) $$ and $$p({\bf X}|\theta^{(t)},\lambda_1^{(t)},\lambda_2^{(t)})$$ in this
