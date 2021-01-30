@@ -334,8 +334,8 @@ results_df = data.frame(term=term, estimate=estim, std.error=std)
 dwplot(results_df)
 ```
 
-![](/unnamed-chunk-18-1.png)
+![](/images/2020-11-02-Variance-reduction-mc/unnamed-chunk-18-1.png)
 
 It is observable that control variate method provides much smaller
 variance. However, it seems that the estimated price is a little bit
-biased and I could not figure out why.
+biased.
