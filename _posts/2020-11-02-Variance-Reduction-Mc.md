@@ -1,11 +1,13 @@
 ---
-title: "Assignment3-Q6.7"
+title: "Variance reduction methods for option pricing with Monte Carlo simulation"
 author: "Hamed Helali"
-date: "16/11/2020"
-output:
-  md_document:
-    variant: markdown_github
-    preserve_yaml: true
+date: 2020-11-02
+tags: [Variance reduction, Monte Carlo simulation, Asian option pricing, R]
+categories: Blog-post
+header:
+  image: "/images/asian.jpg"
+excerpt: "Variance reduction, Monte Carlo simulation, Asian option pricing, R"
+mathjax: "true"
 ---
 
 In this post, we assume a hypothetical (asian) option with the following
@@ -57,9 +59,6 @@ S_T = S_0 * exp((r - 0.5 * sigma^2) * N / 365 + sigma * Z * sqrt(N / 365))
 current_price = price_calc(S_T, N, K, r)
 ```
 
-    ## Loading required package: Rcpp
-
-    ## Loading required package: RcppZiggurat
 
 ``` r
 est = estimate(current_price)
@@ -149,15 +148,17 @@ theta
 
     ## [1] 0.9096794
 
-So, *θ* = 0.9097. Now, control variate estimation of arithmatic asian
+So, $$ \theta = 0.9097 $$. Now, control variate estimation of arithmatic asian
 option can be obtained by:
 
-*μ̂*<sub>*C**V*</sub> = *μ̂*<sub>*M**C*</sub> + *λ*(*θ̂*<sub>*M**C*</sub> − *θ*)
+$$
+\hat \mu_{CV} = \hat \mu_{MC} + \lambda (\hat \theta_{MC} - \theta)
+$$
 
 Where the best choice for *λ* (which decreases the variance most) is:
 
 $$
-\\lambda = \\frac{-cov(\\hat{\\mu}\_{MC}, \\hat\\theta\_{MC})}{var(\\hat\\theta\_{MC})}
+\lambda = \frac{-cov(\hat{\mu}_{MC}, \hat\theta_{MC})}{var(\hat\theta\{MC})}
 $$
 
  And the covarience and varience need to be estimated using
@@ -194,7 +195,7 @@ mean(g_price_nmc)
 
     ## [1] 0.8691086
 
-Therefore, *θ̂*<sub>*M**C*</sub> = 0.8691. Now, we estimate *λ* as
+Therefore, $$ \hat \theta_{MC} = 0.8691 $$. Now, we estimate $$ \lambda $$ as
 follows:
 
 ``` r
@@ -333,7 +334,7 @@ results_df = data.frame(term=term, estimate=estim, std.error=std)
 dwplot(results_df)
 ```
 
-![](A3-Q6-7_files/figure-markdown_github/unnamed-chunk-18-1.png)
+![](/unnamed-chunk-18-1.png)
 
 It is observable that control variate method provides much smaller
 variance. However, it seems that the estimated price is a little bit
