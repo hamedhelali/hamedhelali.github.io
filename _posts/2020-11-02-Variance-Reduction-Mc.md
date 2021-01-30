@@ -159,6 +159,7 @@ Where the best choice for *λ* (which decreases the variance most) is:
 $$
 \\lambda = \\frac{-cov(\\hat{\\mu}\_{MC}, \\hat\\theta\_{MC})}{var(\\hat\\theta\_{MC})}
 $$
+
  And the covarience and varience need to be estimated using
 simulation.  
 We also need to simulate geometric asian option:
