@@ -125,8 +125,7 @@ Control Variate for Asian Option Pricing
 
 We choose geometric-average asian call option as the control variate for
 the arithmatic-average asian call option. We call the geometric asian
-option price *θ* and we can analytically obtain it by (6.79) in the
-textbook and I will implement the computing function here:
+option price *θ* and we can analytically obtain it by (6.79) [here](https://www.stat.colostate.edu/computationalstatistics/) and I will implement the computing function here:
 
 ``` r
 exact_geo_asian = function(S_0, K, t, r, sigma, N){
