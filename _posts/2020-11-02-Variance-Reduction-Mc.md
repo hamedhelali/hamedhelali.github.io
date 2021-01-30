@@ -36,7 +36,7 @@ estimate = function(vector){
 }
 ```
 
-a) European option pricing
+European option pricing
 ==========================
 
 First I define a price calculator function which calculates payoff at
@@ -73,7 +73,7 @@ paste("Confidence interval for the estimation is: (",est[2], ",", est[3], ")")
 
     ## [1] "Confidence interval for the estimation is: ( 1.90133340831646 , 2.39401869225276 )"
 
-b) Asian Option Pricing (using naive MC)
+Asian Option Pricing (using naive MC)
 ========================================
 
 ``` r
@@ -120,7 +120,7 @@ paste("Confidence interval for the estimation is: (",est[2], ",", est[3], ")")
 results = est
 ```
 
-c) Control Variate for Asian Option Pricing
+Control Variate for Asian Option Pricing
 ===========================================
 
 We choose geometric-average asian call option as the control variate for
@@ -158,7 +158,7 @@ $$
 Where the best choice for *λ* (which decreases the variance most) is:
 
 $$
-\lambda = \frac{-cov(\hat{\mu}_{MC}, \hat\theta_{MC})}{var(\hat\theta\{MC})}
+\lambda = \frac{-cov(\hat \mu_{MC}, \hat \theta_{MC})}{var(\hat \theta_{MC})}
 $$
 
  And the covarience and varience need to be estimated using
@@ -226,7 +226,7 @@ paste("Confidence interval for the estimation is: (",est[2], ",", est[3], ")")
 results = rbind(results, est)
 ```
 
-d) Antithetic method for Asian Option Pricing
+Antithetic method for Asian Option Pricing
 =============================================
 
 ``` r
@@ -273,7 +273,7 @@ paste("Confidence interval for the estimation is: (",est[2], ",", est[3], ")")
 results = rbind(results, est)
 ```
 
-e) Comparing the methods
+Comparing the methods
 ========================
 
 Results for arithmatic-average asian call option using different methods
